@@ -18,7 +18,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
-*.cvisignore
+*.cvsignore
 
 # External tool builders
 .externalToolBuilders/
