@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar" mode="voice" root="one" tag-format="semantics/1.0-literals" version="1.0" xml:lang="en-us">
+    <rule id="one" scope="public">
+        <ruleref uri="#Column0"/>
+    </rule>
+    <rule id="Column0" scope="private">
+        <one-of>
+            <item>1<tag>One</tag>
+            </item>
+        </one-of>
+    </rule>
+</grammar>

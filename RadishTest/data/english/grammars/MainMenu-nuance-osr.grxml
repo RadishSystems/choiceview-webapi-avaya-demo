@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar" mode="voice" root="MainMenu" version="1.0" xml:lang="en-us">
+    <rule id="MainMenu" scope="public">
+        <ruleref uri="#Column0"/>
+        <tag>cxtag=Column0.atag;Column0=Column0.atag;</tag>
+    </rule>
+    <rule id="Column0" scope="private">
+        <tag>atag=''</tag>
+        <one-of>
+            <item>1<tag>atag+='One'</tag>
+            </item>
+            <item>2<tag>atag+='Two'</tag>
+            </item>
+            <item>3<tag>atag+='Three'</tag>
+            </item>
+        </one-of>
+    </rule>
+</grammar>

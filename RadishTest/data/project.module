@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module category="" descriptorversion="1.0" entrypoint="RadishTest/Start" forcesubdialogcall="false" frameworkversion="06.00.11.03" iconlarge="" iconsmall="" modifyInputs="false" modifyOutputs="false" outputmultipart="false" paramasnamelist="false" provider="" submitmethod="get" version="1.0.0" webname="RadishTest">
+    <description/>
+    <language name="english" root="en-us"/>
+    <dependencies/>
+</module>

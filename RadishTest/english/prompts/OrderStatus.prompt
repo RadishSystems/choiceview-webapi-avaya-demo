@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PromptDoc>
+    <Prompt audioonly="false" bargeintype="speech" order="standard" version="1.0">
+        <PromptLevel count="1" valid="true">
+            <Properties>
+                <Property name="TimeUnit" value="seconds"/>
+                <Property name="Timeout" value="8"/>
+                <Property name="BargeIn" value="true"/>
+            </Properties>
+            <ChildItems>
+                <Segment class="com.avaya.sce.prompts.internal.segment.TTS" type="TTS">
+                    <Properties>
+                        <Property name="Name" value="The estimated delivery date is February 5, 2013.  The carrier is U P S.  The tracking number is "/>
+                    </Properties>
+                    <ChildItems/>
+                </Segment>
+                <Segment class="com.avaya.sce.prompts.internal.segment.TTS" type="TTS">
+                    <Properties>
+                        <Property name="Name" value="1 Z E 0 8 5 0 A 0 3 1 3 0 0 1 1 6 0"/>
+                    </Properties>
+                    <ChildItems>
+                        <Segment class="com.avaya.sce.prompts.internal.segment.SSMLSayAs" type="SSMLSayAs">
+                            <Properties>
+                                <Property name="Interpret-As" value="letters"/>
+                            </Properties>
+                            <ChildItems/>
+                        </Segment>
+                    </ChildItems>
+                </Segment>
+            </ChildItems>
+        </PromptLevel>
+    </Prompt>
+</PromptDoc>

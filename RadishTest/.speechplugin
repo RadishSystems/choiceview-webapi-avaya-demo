@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<propertystore id="sage" version="1.0">
+    <propertymap/>
+    <nestedpropertystore>
+        <propertystore id="runtimecommon" version="1.0">
+            <propertymap/>
+            <nestedpropertystore>
+                <propertystore id="scert" version="1.0">
+                    <propertymap>
+                        <property name="version" value="06.00.11.03" version="1.0"/>
+                    </propertymap>
+                    <nestedpropertystore/>
+                </propertystore>
+            </nestedpropertystore>
+        </propertystore>
+        <propertystore id="runtime" version="1.0">
+            <propertymap/>
+            <nestedpropertystore>
+                <propertystore id="tomcat" version="1.0">
+                    <propertymap>
+                        <property name="version" value="tomcatV6" version="1.0"/>
+                    </propertymap>
+                    <nestedpropertystore/>
+                </propertystore>
+                <propertystore id="scert" version="1.0">
+                    <propertymap>
+                        <property name="version" value="06.00.11.03" version="1.0"/>
+                    </propertymap>
+                    <nestedpropertystore/>
+                </propertystore>
+            </nestedpropertystore>
+        </propertystore>
+        <propertystore id="general" version="1.0">
+            <propertymap/>
+            <nestedpropertystore>
+                <propertystore id="project" version="1.0">
+                    <propertymap>
+                        <property name="name" value="RadishTest" version="1.0"/>
+                        <property name="logpropertiesupdated" value="3.0.17x2" version="1.0"/>
+                        <property name="version" value="1.0.0" version="1.0"/>
+                    </propertymap>
+                    <nestedpropertystore/>
+                </propertystore>
+                <propertystore id="ide" version="1.0">
+                    <propertymap>
+                        <property name="version" value="302" version="1.0"/>
+                    </propertymap>
+                    <nestedpropertystore/>
+                </propertystore>
+            </nestedpropertystore>
+        </propertystore>
+    </nestedpropertystore>
+</propertystore>

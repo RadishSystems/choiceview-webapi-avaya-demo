@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<grammar>
+    <properties>
+        <mode value="voice"/>
+        <type value="static"/>
+    </properties>
+    <data>
+        <column id="Column0" repeat="-1" width="150">
+            <item repeat="-1" repeat-prob="-1" tag="One" value="1" weight="-1"/>
+        </column>
+    </data>
+</grammar>

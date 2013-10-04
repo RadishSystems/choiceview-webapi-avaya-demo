@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<PromptDoc>
+    <Prompt audioonly="false" bargeintype="speech" order="standard" version="1.0">
+        <PromptLevel count="1" valid="true">
+            <Properties>
+                <Property name="TimeUnit" value="seconds"/>
+                <Property name="Timeout" value="8"/>
+                <Property name="BargeIn" value="true"/>
+            </Properties>
+            <ChildItems>
+                <Segment class="com.avaya.sce.prompts.internal.segment.TTS" type="TTS">
+                    <Properties>
+                        <Property name="Name" value="Your call is being transferred."/>
+                    </Properties>
+                    <ChildItems/>
+                </Segment>
+            </ChildItems>
+        </PromptLevel>
+    </Prompt>
+</PromptDoc>
