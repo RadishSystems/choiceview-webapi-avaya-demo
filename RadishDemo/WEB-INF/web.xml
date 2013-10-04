@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+This XML descriptor is automatically generated and managed by the
+application development environment.  While manual updates to this 
+file may be preserved, it is best to manage this file through the application development environment tool.
+
+Copyright 2004-2011 Avaya Inc.
+--><!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app id="WebApp_ID">
+
+    <context-param>
+        <param-name>sage.callcontrol.project.startpage</param-name>
+        <param-value>jsp/start.jsp</param-value>
+        <description>Starting Page/JSP/Servlet</description>
+    </context-param>
+    
+    <context-param>
+        <param-name>runtime-Platform</param-name>
+        <param-value>Desktop</param-value>
+        <description>Runtime Platform {Desktop|Experience Portal|Voice Portal|Other|IR|MPS}</description>
+    </context-param>
+    
+    <context-param>
+        <param-name>keystoreLocation</param-name>
+        <param-value>/usr/share/tomcat6/lib/trusted_weblm_certs.jks</param-value>
+        <description>location of the local keystore</description>
+    </context-param>
+    
+    <context-param>
+        <param-name>keystorePassword</param-name>
+        <param-value>password</param-value>
+        <description>password for the local keystore. CHANGE FOR YOUR ENVIRONMENT</description>
+    </context-param>
+    
+    <context-param>
+        <param-name>truststoreLocation</param-name>
+        <param-value>/usr/share/tomcat6/lib/trusted_weblm_certs.jks</param-value>
+        <description>location of the local truststore</description>
+    </context-param>
+    
+    <context-param>
+        <param-name>truststorePassword</param-name>
+        <param-value>password</param-value>
+        <description>password for the local truststore. CHANGE FOR YOUR ENVIRONMENT</description>
+    </context-param>
+    
+    <context-param>
+        <param-name>ChoiceViewHost</param-name>
+        <param-value>cvnet2.radishsystems.com</param-value>
+        <description></description>
+    </context-param>
+    
+    <context-param>
+        <param-name>ChoiceViewHostUser</param-name>
+        <param-value>demo</param-value>
+        <description></description>
+    </context-param>
+    
+    <context-param>
+        <param-name>ChoiceViewHostPassword</param-name>
+        <param-value>radisH1!</param-value>
+        <description></description>
+    </context-param>
+    
+    <context-param>
+    	<param-name>pollInterval</param-name>
+    	<param-value>1000</param-value>
+    	 <description>How often (in milliseconds) that the Polling Thread should poll the Choice View API for new events</description>
+    </context-param>
+    
+    <context-param>
+        <param-name>basicHttpURL</param-name>
+         <param-value>https://YOUR HOST:YOUR PORT/mpp/ccxml/basichttp.php</param-value>
+        <description>This is ment to replace the value returned by basichttp. You may need to use this if your envirnment requires it.</description>
+    </context-param>
+ 
+    <servlet id="ChoiceViewServlet">
+        <servlet-name>ChoiceViewServlet</servlet-name>
+        <servlet-class>com.radish.choiceview.ChoiceViewServlet</servlet-class>
+        
+            <init-param>
+                <param-name> DDAppHome </param-name>          
+              
+                 <param-value>  C:\\Users\\Derek\\Documents\\Workspace\\speech\\RadishDemo</param-value> 
+                <!-- <param-value> /usr/share/tomcat6/webapps/RadishDemo </param-value>-->
+                 <description>set this to your local working environment</description>
+                
+        	</init-param>
+   
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    
+    <servlet id="wsproxy-servlet">
+        <servlet-name>WsProxy</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.ccxml.WsProxy</servlet-class>
+    </servlet>
+    <servlet id="ws2proxy-servlet">
+        <servlet-name>Ws2Proxy</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.ccxml.Ws2Proxy</servlet-class>
+    </servlet>
+    <servlet id="dbproxy-servlet">
+        <servlet-name>DbProxy</servlet-name>
+        <servlet-class>com.avaya.sce.runtime.ccxml.DbProxy</servlet-class>
+    </servlet>
+    <servlet-mapping id="wsproxy-servletmapping">
+        <servlet-name>WsProxy</servlet-name>
+        <url-pattern>/WsProxy</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="ws2proxy-servletmapping">
+        <servlet-name>Ws2Proxy</servlet-name>
+        <url-pattern>/Ws2Proxy</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping id="dbproxy-servletmapping">
+        <servlet-name>DbProxy</servlet-name>
+        <url-pattern>/DbProxy</url-pattern>
+    </servlet-mapping>
+</web-app>

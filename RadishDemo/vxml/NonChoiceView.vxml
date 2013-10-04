@@ -1,0 +1,82 @@
+<vxml xmlns="http://www.w3.org/2001/vxml" version="2.0">
+   
+	<menu id="mainMenu">
+	  <property name="inputmodes" value="dtmf"/>
+	  <prompt>
+		   Press 1 for order status.  
+		   Press 2 for customer support.  
+		   Press 3 to replay this menu.  
+		   You can also visit us online at www.radishsystems.com
+	  </prompt>
+	  <choice dtmf="1" next="#orderStatusForm"/>
+	  <choice dtmf="2" next="#transferForm"/>
+	  <choice dtmf="3" next="#mainMenu"/>
+	  
+	  <noinput>
+	  	<prompt>I'm sorry. I didn't hear you.</prompt>
+	  	<reprompt/>
+	  </noinput>
+	  
+	  <nomatch>
+		  <prompt> I'm sorry. That was not a valid option.</prompt>
+		  <reprompt/>
+	  </nomatch>
+	  
+	</menu>
+	
+	<form id="transferForm">
+		  	<transfer name="theCall" destexpr="'tel:+13034432032'" connecttimeout="30s" type="blind">
+	
+			<prompt>
+				One moment while I transfer you to a customer service specialist.
+				<break size="small" />
+			</prompt>
+	
+			<filled>
+				<log>
+					transfer returned:	<value expr="theCall" />
+				</log>
+	
+				<if cond="theCall == 'busy'">
+					<prompt>The line was busy. Please try again later.</prompt>
+				<elseif cond="theCall == 'noanswer'" />
+					<prompt>No one is answering.</prompt>
+				<elseif cond="theCall == 'network_busy'" />
+					<prompt>The network is busy!</prompt>
+				<elseif cond="theCall == 'near_end_disconnect'" />
+					<prompt>The call was completed, and you terminated it with dtmf	input.</prompt>
+				<elseif cond="theCall == 'far_end_disconnect'" />
+					<prompt>The call was completed, and the callee terminated it.</prompt>
+				<elseif cond="theCall == 'maxtime_disconnect'" />
+					<prompt>The call was completed, and it exceeded the maximum time allowed.</prompt>
+				<elseif cond="theCall == 'network_disconnect'" />
+					<prompt>The call was completed, but it was terminated by the network.</prompt>
+				</if>
+			</filled>
+	
+			<error>
+				<!-- receive notification of transfer failure -->
+				<log>
+					<value expr="_event" />
+					occurred while attempting
+					transfer to	<value expr="phone_number" />.
+				</log>
+			</error>
+	
+		</transfer>
+		
+	</form>
+	
+	<form id="orderStatusForm">
+		<block>
+			<prompt>
+				The estimated delivery date is February 5, 2013.  
+				The carrier is U P S.  The tracking number is 
+				<say-as interpret-as="letters">1ZE0850A0313001160</say-as>
+			</prompt>
+		</block>
+	
+	</form>
+	
+
+</vxml>

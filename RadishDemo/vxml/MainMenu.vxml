@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version = "2.1" xmlns="http://www.w3.org/2001/vxml">
+  <form>
+    <block>
+    <prompt>
+    <break time="750ms"/>
+      This is the main menu.  Please tap your selection at any time.
+      <break time="10s"/>   
+    </prompt>
+    </block>
+  </form>
+</vxml>

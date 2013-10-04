@@ -1,0 +1,52 @@
+<vxml xmlns="http://www.w3.org/2001/vxml" version="2.0">
+	
+  <form>
+  
+  	<var name="tries" expr="0"/>
+  	
+  	<block>
+	   	<prompt> 
+			<audio src="http://localhost:8080/RadishDemo/data/english/prompts/ChoiceView_Radish.wav" />
+			Welcome to the visual IVR Demonstration from Radish Systems. 
+			You will receive visual menus and responses on your smart mobile device.  
+			Just stay on this call and return to the Home screen. 
+		</prompt>
+		<var name="callID" expr="session.connection.ccxml.values.callID"/>
+		<var name="connectID" expr="session.connection.ccxml.values.in_connectionid"/>	    	
+		<log>callID is: <value expr="callID"/> 
+			 connectID is: <value expr="connectID"/>no
+		</log>
+		
+  	</block>
+  			
+	<field name="answer" type="digits?length=1">			
+	
+		<prompt>
+       		  Tap ChoiceView, then tap Start.  If you do not have ChoiceView, press 1.  You will hear the normal voice prompts.
+		</prompt> 
+
+		<filled>
+			<if cond="answer == '1'">
+				<log expr ="'answer is 1'"/>
+				<var name="result" expr="'IVR'"/>
+				<exit namelist="result"/>
+			<else/>
+				<log expr ="'answer is NOT 1'"/>				
+				<var name="result" expr="'choiceview'"/>
+				<exit namelist="result"/>		
+			</if>
+		</filled>
+		<noinput  timeout="5s">
+			
+			<log expr="'noinput in Choice.vxml'"/>
+			<assign name="tries" expr="tries + 1"/>
+			<if cond="tries == 4">
+				<var name="result" expr="'IVR'"/>
+				<exit namelist="result"/>	
+			<else/>
+				<reprompt/>
+			</if>				
+    	</noinput>
+  	</field>
+  </form>
+</vxml>

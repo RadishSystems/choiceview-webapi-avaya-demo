@@ -1,0 +1,7 @@
+<vxml xmlns="http://www.w3.org/2001/vxml" version="2.0">
+  <form>
+	   	<prompt> 
+    		Hit the ChoiceView page
+    	</prompt>
+  </form>
+</vxml>

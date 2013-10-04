@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version = "2.1" xmlns="http://www.w3.org/2001/vxml">
+  <form>
+    <block>
+    <prompt>
+    <break time="750ms"/>
+      Here is your order status.  You can page back to it and save it in History for future reference
+      <break time="10s"/>    
+    </prompt>
+    </block>
+  </form>
+</vxml>
