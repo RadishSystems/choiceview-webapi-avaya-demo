@@ -23,7 +23,7 @@ Copyright 2004-2011 Avaya Inc.
     <context-param>
         <param-name>keystoreLocation</param-name>
         <param-value>/usr/share/tomcat6/lib/trusted_weblm_certs.jks</param-value>
-        <description>location of the local keystore</description>
+        <description>location of the local keystore. CHANGE FOR YOUR ENVIRONMENT</description>
     </context-param>
     
     <context-param>
@@ -35,7 +35,7 @@ Copyright 2004-2011 Avaya Inc.
     <context-param>
         <param-name>truststoreLocation</param-name>
         <param-value>/usr/share/tomcat6/lib/trusted_weblm_certs.jks</param-value>
-        <description>location of the local truststore</description>
+        <description>location of the local truststore. CHANGE FOR YOUR ENVIRONMENT</description>
     </context-param>
     
     <context-param>
@@ -80,11 +80,7 @@ Copyright 2004-2011 Avaya Inc.
         
             <init-param>
                 <param-name> DDAppHome </param-name>          
-              
-                 <param-value>  C:\\Users\\Derek\\Documents\\Workspace\\speech\\RadishDemo</param-value> 
-                <!-- <param-value> /usr/share/tomcat6/webapps/RadishDemo </param-value>-->
-                 <description>set this to your local working environment</description>
-                
+                <description>set this to your local working environment. This is used to set up the servlet logger. CHANGE FOR YOUR ENVIRONMENT</description>
         	</init-param>
    
         <load-on-startup>1</load-on-startup>
