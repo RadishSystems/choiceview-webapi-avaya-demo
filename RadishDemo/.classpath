@@ -7,7 +7,7 @@
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/el-api.jar"/>
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/annotations-api.jar"/>
 	<classpathentry kind="src" path="WEB-INF/src"/>
-	<classpathentry kind="lib" path="C:/Users/Derek/Documents/Workspace/speech/RadishDemo/WEB-INF/lib/choiceview-webapi-java-1.1-avaya-alpha4.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/choiceview-webapi-java-1.1-avaya-alpha4.jar"/>
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/commons-httpclient-3.1.jar"/>
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/httpclient-4.2.1.jar"/>
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/log4j-1.2.15.jar"/>
